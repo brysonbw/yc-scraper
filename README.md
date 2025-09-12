@@ -1,7 +1,8 @@
 # YC Scraper
 
-A collection of python scripts to scrape company information from [Y Combinator Startup Directory](https://www.ycombinator.com/companies).
+A collection of python scripts to scrape [Y Combinator Startup Directory](https://www.ycombinator.com/companies).
 
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-orange)
 ---
 
 ## Table of Contents
