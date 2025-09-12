@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from dotenv import dotenv_values
@@ -104,7 +103,7 @@ for idx, link in enumerate(links, start=1):
         # Populate `about`
         whitespace_pre_line_divs = driver.find_elements(By.CSS_SELECTOR, "div.whitespace-pre-line")
         if whitespace_pre_line_divs and len(whitespace_pre_line_divs) > 0:
-            first_div = first_div = whitespace_pre_line_divs[0] 
+            first_div = whitespace_pre_line_divs[0] 
             parent = first_div.find_element(By.XPATH, "..")
             parent_classes = parent.get_attribute("class").split()
 
@@ -125,7 +124,6 @@ for idx, link in enumerate(links, start=1):
 
         # Company card
         company_card = driver.find_element(By.XPATH,f"//div[contains(@class, 'ycdc-card-new') and contains(., '{name}')]")
-        company_card_divs = company_card.find_elements(By.CSS_SELECTOR, "div")
         # Company information divs
         company_info_div = company_card.find_element(By.XPATH,"//div[contains(@class, 'space-y-2')]")
         company_info_child_divs = company_info_div.find_elements(By.CSS_SELECTOR, "div.justify-between")
